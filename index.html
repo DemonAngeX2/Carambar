@@ -98,18 +98,18 @@
 
     // Fonction pour obtenir une blague par son ID depuis l'API
     function getBlagueById() {
-      const id = prompt('Entrez l\'ID de la blague :');
-      if (id) {
-        fetch(`https://carambar-api.onrender.com/api/blagues/${id}`, { mode: 'cors' })
-          .then(response => response.json())
-          .then(joke => {
+        const id = prompt('Entrez l\'ID de la blague :');
+         if (id) {
+            fetch(`https://carambar-api.onrender.com/api/blagues/${id}`, { mode: 'cors' })
+            .then(response => response.json())
+            .then(joke => {
             displayJoke(joke);
-          })
-          .catch(error => {
-            console.error('Une erreur s\'est produite :', error);
-          });
-      }
+        })
+        .catch(error => {
+        console.error('Une erreur s\'est produite :', error);
+        });
     }
+}
 
     // Fonction pour obtenir toutes les blagues depuis l'API et afficher seulement lorsque le bouton est pressé
     function getAllBlagues() {
