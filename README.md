@@ -1,4 +1,4 @@
-# API de Blagues
+# API de Blagues 🍬
 
 Ce projet est une application web qui utilise une API pour afficher des blagues aléatoires et permettre aux utilisateurs de rechercher des blagues par leur ID. L'API utilisée est l'API Carambar qui fournit un large éventail de blagues amusantes.
 
