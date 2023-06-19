@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://www.danstapub.com/wp-content/uploads/2016/03/dans-ta-pub-carambar-adultes-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .joke-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .joke-question {
+    font-weight: bold;
+  }
+  
+  .joke-answer {
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Ajout d'une marge droite entre les boutons */
+  }  
