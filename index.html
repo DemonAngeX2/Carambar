@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API de Blagues</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .joke-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .joke-question {
+      font-weight: bold;
+    }
+
+    .joke-answer {
+      margin-top: 10px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>API de Blagues</h1>
+
+  <div id="jokeContainer"></div>
+
+  <div class="button-container">
+    <button class="button" onclick="getRandomJoke()">Obtenir une blague aléatoire</button>
+  </div>
+
+  <script>
+    const jokeContainer = document.getElementById('jokeContainer');
+
+    // Fonction pour afficher une blague dans le conteneur
+    function displayJoke(joke) {
+      const jokeHTML = `
+        <div class="joke-container">
+          <p class="joke-question">${joke.question}</p>
+          <p class="joke-answer">${joke.answer}</p>
+        </div>
+      `;
+      jokeContainer.innerHTML = jokeHTML;
+    }
+
+    // Fonction pour obtenir une blague au hasard depuis l'API
+    function getRandomJoke() {
+        fetch('https://carambar-api.onrender.com/api/blagues/hasard')
+        .then(response => response.json())
+        .then(joke => {
+          displayJoke(joke);
+        })
+        .catch(error => {
+          console.error('Une erreur s\'est produite :', error);
+        });
+    }
+
+    // Fonction pour obtenir une blague par son ID depuis l'API
+    function getJokeById() {
+      const id = prompt('Entrez l\'ID de la blague :');
+      if (id) {
+        fetch(`https://carambar-api.onrender.com/api/blagues/${id}`)
+          .then(response => response.json())
+          .then(joke => {
+            displayJoke(joke);
+          })
+          .catch(error => {
+            console.error('Une erreur s\'est produite :', error);
+          });
+      }
+    }
+
+    // Fonction pour obtenir toutes les blagues depuis l'API
+    function getAllJokes() {
+        fetch('https://carambar-api.onrender.com/api/blagues')
+        .then(response => response.json())
+        .then(jokes => {
+          jokes.forEach(joke => {
+            displayJoke(joke);
+          });
+        })
+        .catch(error => {
+          console.error('Une erreur s\'est produite :', error);
+        });
+    }
+
+    // Appel initial pour obtenir toutes les blagues au chargement de la page
+    getAllJokes();
+  </script>
+</body>
+</html>
