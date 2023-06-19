@@ -52,6 +52,7 @@
 
   <div class="button-container">
     <button class="button" onclick="getRandomJoke()">Obtenir une blague aléatoire</button>
+    <button class="button" onclick="getBlagueById()">Obtenir une blague par ID</button>
   </div>
 
   <script>
@@ -70,7 +71,7 @@
 
     // Fonction pour obtenir une blague au hasard depuis l'API
     function getRandomJoke() {
-        fetch('https://carambar-api.onrender.com/api/blagues/hasard')
+      fetch('https://carambar-api.onrender.com/api/blagues/hasard', { mode: 'cors' })
         .then(response => response.json())
         .then(joke => {
           displayJoke(joke);
@@ -84,7 +85,7 @@
     function getBlagueById() {
       const id = prompt('Entrez l\'ID de la blague :');
       if (id) {
-        fetch(`https://carambar-api.onrender.com/api/blagues/${id}`)
+        fetch(`https://carambar-api.onrender.com/api/blagues/${id}`, { mode: 'cors' })
           .then(response => response.json())
           .then(joke => {
             displayJoke(joke);
@@ -97,7 +98,7 @@
 
     // Fonction pour obtenir toutes les blagues depuis l'API
     function getAllBlagues() {
-        fetch('https://carambar-api.onrender.com/api/blagues')
+      fetch('https://carambar-api.onrender.com/api/blagues', { mode: 'cors' })
         .then(response => response.json())
         .then(jokes => {
           jokes.forEach(joke => {
