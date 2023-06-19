@@ -53,7 +53,7 @@
   <div class="button-container">
     <button class="button" onclick="getRandomJoke()">Obtenir une blague aléatoire</button>
     <button class="button" onclick="getBlagueById()">Obtenir une blague par ID</button>
-    <button class="button" onclick="getAllBlagues()">Obtenir toutes les blagues</button>
+    <button id="allBlaguesButton" class="button">Afficher toutes les blagues</button>
   </div>
 
   <script>
@@ -111,16 +111,19 @@
       }
     }
 
-    // Fonction pour obtenir toutes les blagues depuis l'API
+    // Fonction pour obtenir toutes les blagues depuis l'API et afficher seulement lorsque le bouton est pressé
     function getAllBlagues() {
-      fetch('https://carambar-api.onrender.com/api/blagues', { mode: 'cors' })
-        .then(response => response.json())
-        .then(jokes => {
-          displayAllJokes(jokes);
-        })
-        .catch(error => {
-          console.error('Une erreur s\'est produite :', error);
-        });
+      const allBlaguesButton = document.getElementById('allBlaguesButton');
+      allBlaguesButton.addEventListener('click', () => {
+        fetch('https://carambar-api.onrender.com/api/blagues', { mode: 'cors' })
+          .then(response => response.json())
+          .then(jokes => {
+            displayAllJokes(jokes);
+          })
+          .catch(error => {
+            console.error('Une erreur s\'est produite :', error);
+          });
+      });
     }
 
     // Appel initial pour obtenir toutes les blagues au chargement de la page
