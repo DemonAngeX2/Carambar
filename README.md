@@ -1,8 +1,8 @@
-# API de Blagues 🍬
+# API de Blagues Carambar🍬
 
 Ce projet est une application web qui utilise une API pour afficher des blagues aléatoires et permettre aux utilisateurs de rechercher des blagues par leur ID. L'API utilisée est l'API Carambar qui fournit un large éventail de blagues amusantes.
 
-## Fonctionnement
+## 📃 Fonctionnement
 
 L'application utilise HTML, CSS et JavaScript pour créer l'interface utilisateur et interagir avec l'API. Lorsque l'utilisateur ouvre l'application dans son navigateur, il voit un titre "API de Blagues" et un conteneur vide pour afficher les blagues.
 
@@ -18,14 +18,14 @@ Les fonctionnalités de l'application sont les suivantes :
 
 L'application utilise des requêtes fetch pour communiquer avec l'API Carambar et des manipulations DOM pour afficher les données dans le navigateur. Le CSS est utilisé pour styliser l'interface utilisateur et rendre l'application plus attrayante visuellement.
 
-## Configuration
+## ⚙️ Configuration
 
 Aucune configuration supplémentaire n'est requise pour exécuter l'application. Il suffit d'ouvrir le fichier HTML dans n'importe quel navigateur web moderne.
 
-## Ressources
+## 📦 Ressources
 
 - [API Carambar](https://carambar-api.onrender.com/api/blagues) - L'API utilisée pour obtenir les blagues.
 
-## Auteur
+## 👨 Auteur
 
 Ce projet a été développé par Alex CHOCHOIS.
