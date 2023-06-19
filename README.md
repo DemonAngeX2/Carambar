@@ -2,6 +2,12 @@
 
 Ce projet est une application web qui utilise une API pour afficher des blagues aléatoires et permettre aux utilisateurs de rechercher des blagues par leur ID. L'API utilisée est l'API Carambar qui fournit un large éventail de blagues amusantes.
 
+# 🌿 Branches
+
+Il y a plusieurs branches dans le projet. Le main est une copie du Frontend.
+Le backend est la branche contenant le serveur hébergé sur Render.com.
+Le Frontend hébergé sur Github Page.
+
 ## 📃 Fonctionnement
 
 L'application utilise HTML, CSS et JavaScript pour créer l'interface utilisateur et interagir avec l'API. Lorsque l'utilisateur ouvre l'application dans son navigateur, il voit un titre "API de Blagues" et un conteneur vide pour afficher les blagues.
