@@ -1,9 +1,8 @@
-// app.js
-
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
 const blagueRoutes = require('./views/blagueRoutes');
+const cors = require('cors');
 
 const app = express();
 
@@ -20,6 +19,9 @@ const swaggerOptions = {
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+// Utilisation du middleware CORS
+app.use(cors());
 
 app.use('/api/blagues', blagueRoutes);
 
