@@ -9,4 +9,3 @@ class Blague {
   }
   
   module.exports = Blague;
-  
