@@ -81,7 +81,7 @@
     }
 
     // Fonction pour obtenir une blague par son ID depuis l'API
-    function getJokeById() {
+    function getBlagueById() {
       const id = prompt('Entrez l\'ID de la blague :');
       if (id) {
         fetch(`https://carambar-api.onrender.com/api/blagues/${id}`)
@@ -96,7 +96,7 @@
     }
 
     // Fonction pour obtenir toutes les blagues depuis l'API
-    function getAllJokes() {
+    function getAllBlagues() {
         fetch('https://carambar-api.onrender.com/api/blagues')
         .then(response => response.json())
         .then(jokes => {
@@ -110,7 +110,7 @@
     }
 
     // Appel initial pour obtenir toutes les blagues au chargement de la page
-    getAllJokes();
+    getAllBlagues();
   </script>
 </body>
 </html>
