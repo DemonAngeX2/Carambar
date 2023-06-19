@@ -25,6 +25,8 @@ Aucune configuration supplémentaire n'est requise pour exécuter l'application.
 ## 📦 Ressources
 
 - [API Carambar](https://carambar-api.onrender.com/api/blagues) - L'API utilisée pour obtenir les blagues.
+- [Frontend](https://github.com/DemonAngeX2/Carambar/tree/Frontend) - Hébergé sur GitHub Page
+- [Backend](https://github.com/DemonAngeX2/Carambar/tree/Backend) - Hébergé sur Render.com (https://carambar-api.onrender.com)
 
 ## 👨 Auteur
 
